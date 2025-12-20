@@ -24,7 +24,7 @@ O **Robô Otto Wheels** é composto por subsistemas mecânicos, eletrônicos e d
 
 ## 3. Especificações técnicas
 
-| Item                   | Descrição / Exemplo |
+| Item                   | Descrição / Exemplo   |
 |------------------------|---------------------|
 | Microcontrolador       | Arduino Uno ou Nano        |
 | Alimentação            | 5–12 V DC           |
