@@ -52,7 +52,7 @@ Os principais componentes eletrônicos utilizados no **Robô Otto Wheels** são:
 ### 5.1 Requisitos
 
 - IDE de programação compatível (ex.: Arduino IDE)  
-- Bibliotecas necessárias para o correto funcionamento do robô  
+- Bibliotecas necessárias para o funcionamento correto do robô  
 - Cabo USB para comunicação com o microcontrolador  
 
 ### 5.2 Procedimento de Instalação
@@ -62,9 +62,9 @@ Os principais componentes eletrônicos utilizados no **Robô Otto Wheels** são:
 3. Compilar o código para verificação de erros  
 4. Enviar o programa para o microcontrolador  
 
----
+
 
 ## Autoria do Projeto
 
 - **Lorena Gonçalves**  
-- **Suellen De Jesus**
+- **Suellen de Jesus**
