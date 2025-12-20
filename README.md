@@ -8,11 +8,11 @@ O robô foi projetado e montado virtualmente no software **Fusion 360**, no qual
 
 ---
 
-## 2. Visão Geral do Sistema
+## 2. Visão geral do sistema
 
 O **Robô Otto Wheels** é composto por subsistemas mecânicos, eletrônicos e de controle, integrados para a execução de tarefas automatizadas, com foco em aplicações educacionais e simulações de processos utilizados em canteiros de obras.
 
-### 2.1 Principais Funcionalidades
+### 2.1 Principais funcionalidades
 
 - Movimentação controlada de atuadores  
 - Manipulação de objetos por meio da garra acoplada ao braço robótico  
@@ -22,11 +22,11 @@ O **Robô Otto Wheels** é composto por subsistemas mecânicos, eletrônicos e d
 
 ---
 
-## 3. Especificações Técnicas
+## 3. Especificações técnicas
 
 | Item                   | Descrição / Exemplo |
 |------------------------|---------------------|
-| Microcontrolador       | Arduino Uno         |
+| Microcontrolador       | Arduino Uno ou Nano        |
 | Alimentação            | 5–12 V DC           |
 | Atuadores              | Servomotores        |
 | Sensores               | Ultrassônico        |
@@ -35,15 +35,16 @@ O **Robô Otto Wheels** é composto por subsistemas mecânicos, eletrônicos e d
 
 ---
 
-## 4. Componentes Eletrônicos
+## 4. Componentes eletrônicos
 
 Os principais componentes eletrônicos utilizados no **Robô Otto Wheels** são:
 
 - Microcontroladores  
 - Servomotores  
-- Sensores (ultrassônico e infravermelho)  
+- Sensor ultrassônico 
 - Fonte de alimentação  
-- Cabos e conexões  
+- Cabos e conexões
+- Buzzer  
 
 ---
 
