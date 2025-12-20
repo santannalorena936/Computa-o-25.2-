@@ -43,6 +43,33 @@ int IN2 = 11;  // Controle de direção
 int ENA = 12;  // Controle de velocidade (PWM)
 
 // ============================
+// Sensor ultrassônico
+// ============================
+int trigPin = 7;
+int echoPin = 8;
+const int distanciaMin = 15;
+
+// ============================
+// LED e buzzer
+// ============================
+int ledAlerta = 4;
+int buzzer = 2;
+
+// ============================
+// Medição de distância
+// ============================
+long medirDistancia() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duracao = pulseIn(echoPin, HIGH, 30000);
+  return duracao * 0.034 / 2;
+}
+
+// ============================
 // Função setup()
 // Executada apenas uma vez
 // ============================
@@ -73,6 +100,39 @@ void setup() {
   Serial.println("Sistema do braço robótico iniciado.");
   Serial.println("Use o teclado para controlar os movimentos.");
 }
+// ============================
+// Loop principal
+// ============================
+void loop() {
+
+  long distancia = medirDistancia();
+
+  // 📊 LOG DE DADOS
+  Serial.print("Distancia: ");
+  Serial.print(distancia);
+  Serial.println(" cm");
+
+  // ============================
+  // OBSTÁCULO DETECTADO
+  // ============================
+  if (distancia > 0 && distancia < distanciaMin) {
+
+    // 🔴 Alerta visual
+    digitalWrite(ledAlerta, HIGH);
+
+    // 🔊 Alerta sonoro
+    tone(buzzer, 1000);
+
+    // ⛔ Para o rolo
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+
+
+    Serial.println("ALERTA: Obstáculo detectado!");
+
+    delay(200);
+    return;
+  }
 
 // ============================
 // Função loop()
